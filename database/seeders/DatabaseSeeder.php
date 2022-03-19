@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\models\Admin::create([
+        \App\Models\Admin::create([
             'first_name' => 'admin',
             'last_name' => 'admin',
             'email' => 'admin@test.com',
@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        \App\models\Agency::create([
+        \App\Models\Agency::create([
             'name' => 'agency3',
             'email' => 'agency3@test.com',
             'password' => Hash::make('123456789'),
