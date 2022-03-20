@@ -61,12 +61,12 @@
               </div>
               Orders
             </a>
-            <a class="nav-link"  href="">
+            {{-- <a class="nav-link"  href="">
                 <div class="sb-nav-link-icon">
                   <i class="bi bi-pencil-square"></i>
                 </div>
                 Edit profile
-              </a>
+              </a> --}}
               <a class="nav-link"  href="{{route('logout')}}">
                 <div class="sb-nav-link-icon">
                   <i class="bi bi-pencil-square"></i>
