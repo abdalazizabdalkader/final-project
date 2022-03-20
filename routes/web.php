@@ -13,7 +13,7 @@ use Monolog\Handler\GroupHandler;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('wellcome');
 
 Route::get('/dashboard', function () {
     if (auth()->guard('agency')->check()) {

@@ -38,9 +38,9 @@
                             <td>{{$agency->updated_at}}</td>
                             {{-- <td>{{$agency->avilable ? 'avilable' : 'unavilable'}}</td> --}}
                             <td>
-                                <a class="btn btn-primary btn-sm ">Show</a>
-                                <form action="{{route('admin.unactive', ['id'=>$agency->id])}}" method="POST" enctype="multipart/form-data">@csrf
-                                <button class="btn btn-danger  " name="unactive" value="{{!($agency->avilable)? 1: 0}}">Unavailabel</button></form>
+                                <a class="btn btn-primary btn-sm " href="{{route('agencyProfile',['id'=> $agency->id])}}">Show</a>
+                                {{-- <form action="{{route('admin.unactive', ['id'=>$agency->id])}}" method="POST" enctype="multipart/form-data">@csrf
+                                <button class="btn btn-danger  " name="unactive" value="{{!($agency->avilable)? 1: 0}}">Unavailabel</button></form> --}}
                             </td>
                         </tr>
                     @endforeach

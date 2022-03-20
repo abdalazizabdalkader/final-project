@@ -24,7 +24,7 @@
                   <th>title</th>
                   <th>description</th>
                   <th>Date</th>
-                  <th>Actions</th>
+                  {{-- <th>Actions</th> --}}
 
                 </tr>
               </thead>
@@ -35,12 +35,11 @@
                     <td>{{$item->title}}</td>
                     <td>{{$item->description}}</td>
                     <td>{{$item->created_at->diffForHumans()}}</td>
-                    <td>
-                        {{-- staticBackdrop --}}
+                    {{-- <td>
                         <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="{{'#staticBackdrop'.'$i'}}">
                             hide
                           </button>
-                    </td>
+                    </td> --}}
                     <div class="modal fade" id="{{'staticBackdrop'.'$i'}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-scrollable">
                           <div class="modal-content">
