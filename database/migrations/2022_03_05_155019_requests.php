@@ -18,6 +18,7 @@ class Requests extends Migration
             $table->string('agency_name', 100);
             $table->string('phone', 10);
             $table->string('email', 100);
+            $table->string('case_id')->default(0);
             $table->timestamps();
 
             // $table->foreignId('case_id')->constrained('cases');
