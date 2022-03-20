@@ -17,7 +17,7 @@
                   <th>from</th>
                   <th>to</th>
                   <th>Date</th>
-                  <th>Actions</th>
+                  {{-- <th>Actions</th> --}}
 
                 </tr>
               </thead>
