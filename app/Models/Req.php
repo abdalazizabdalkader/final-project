@@ -40,7 +40,7 @@ class Req extends Model
 	// 	'case_id'
 	// ];
 
-	protected $guarder = [];
+	protected $guarded = [];
 
 	// public function case()
 	// {
