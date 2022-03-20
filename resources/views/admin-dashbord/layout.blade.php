@@ -49,18 +49,18 @@
               </div>
               Cars
             </a>
-            <a class="nav-link" href="{{route('admin.requests')}}">
+            {{-- <a class="nav-link" href="{{route('admin.requests')}}">
               <div class="sb-nav-link-icon">
                 <i class="bi bi-list-ul"></i>
               </div>
               Request
-            </a>
-            <a class="nav-link" href="">
+            </a> --}}
+            {{-- <a class="nav-link" href="">
               <div class="sb-nav-link-icon">
                 <i class="bi bi-list-ul"></i>
               </div>
               Orders
-            </a>
+            </a> --}}
             {{-- <a class="nav-link"  href="">
                 <div class="sb-nav-link-icon">
                   <i class="bi bi-pencil-square"></i>
