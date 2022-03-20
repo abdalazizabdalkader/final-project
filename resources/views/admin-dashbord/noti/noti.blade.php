@@ -47,7 +47,7 @@
                           </button>
                         {{-- <a class="btn btn-danger btn-sm ">hide</a> --}}
 
-                    </td> --}}
+                    {{-- </td> --}}
                 </tr>
                   @endforeach
                 
