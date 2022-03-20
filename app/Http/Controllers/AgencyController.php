@@ -35,8 +35,8 @@ class AgencyController extends Controller
     {
         $request->validate([
             //   'imageFile' => 'required',
-              'url' => 'required',
-              'url.*' => 'mimes:jpeg,jpg,png|max:2048'
+              'url' => 'requiredj',
+              'url.*' => 'mimes:peg,jpg,png|max:2048'
             ]);
         //save photo in folder
         $file_extension = $request->photo->getClientOriginalExtension();

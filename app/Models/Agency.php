@@ -19,21 +19,21 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Agency extends Authenticatable
 {
 
-    use HasFactory,
-        Notifiable,
-        CanResetPassword;
+	use HasFactory,
+		Notifiable,
+		CanResetPassword;
 
-    protected $hidden= [
+	protected $hidden = [
 		'password',
-        'remmber_token'
+		'remmber_token'
 
-    ];
-    protected $casts = [
-        'email_verified_at'=>'DateTime',
-        'active_id' => 'bool',
-        
+	];
+	protected $casts = [
+		'email_verified_at' => 'DateTime',
+		'active_id' => 'bool',
+
 		'avilable' => 'bool'
-    ];
+	];
 	protected $guard = 'agency';
 
 	protected $table = 'agencies';
@@ -49,17 +49,7 @@ class Agency extends Authenticatable
 
 	];
 
-	protected $fillable = [
-		'name',
-		'email',
-		'photo',
-		'password',
-		'subscription_month',
-		'end_subscription',
-		'last_login',
-		'avilable'
-	];
-
+	protected $guarded = [];
 
 	public function subscription()
 	{
