@@ -119,37 +119,11 @@ class CarController extends Controller
         // dd($agencyCar);
         return view('main_UI.agencyProfile')->with('agencyCar',$agencyCar)->with('photoCar', $photoCar);
     }
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Car  $car
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Car $car)
+   
+    public function destroy( $id)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Car  $car
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Car $car)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Car  $car
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Car $car)
-    {
-        //
+        $car = Car::where('id',$id)->first();
+        $car->forceDelete();
+        return redirect()->back()->with('success', 'the car was deleted');
     }
 }

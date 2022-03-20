@@ -17,9 +17,9 @@
             {{-- guard selectors --}}
             <div>
                 <select name="guard" id="guard">
-                    <option value="admin">admin</option>
-                    <option value="agency">agency</option>
                     <option value="customer">customer</option>
+                    <option value="agency">agency</option>
+                    <option value="admin">admin</option>
                 </select>
             </div>
             <br>

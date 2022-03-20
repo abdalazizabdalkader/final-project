@@ -8,7 +8,7 @@
         </a>
 
         <!-- start form -->
-        <form action="{{ route('admin.notify.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.notifyStore') }}" method="POST" enctype="multipart/form-data">
             @csrf
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Title</label>

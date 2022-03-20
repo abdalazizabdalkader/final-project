@@ -9,18 +9,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
-/**
- * Class Case
- * 
- * @property int $id
- * @property string $name
- * 
- * @property Order $order
- * @property Collection|Request[] $requests
- *
- * @package App\Models
- */
-class Case extends Model
+
+class Cases extends Model
 {
 	protected $table = 'cases';
 	protected $perPage = 20;

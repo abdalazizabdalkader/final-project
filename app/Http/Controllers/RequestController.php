@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Request as REQ;
+use App\Models\Req;
 use Illuminate\Http\Request ;
 
 class RequestController extends Controller
@@ -18,16 +18,7 @@ class RequestController extends Controller
         return view('admin-dashbord.requests')->with('reqs',$requests);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
+   
     /**
      * Store a newly created resource in storage.
      *
@@ -36,16 +27,17 @@ class RequestController extends Controller
      */
     public function store(Request $request)
     {
+        // dd( $request->name);j
         $this->validate($request, [
             'phone' => 'required|regex:/(09)[0-9]{9}/'
         ]);
-        $req = REQ::create([
+        $req = Req::create([
             'agency_name' => $request->name,
             'phone' => $request->phone,
             'email' => $request->email,
             'case_id ' => 1
         ]);
-        return redirect()->back()->with('succsess', 'Your request has sended');
+        return redirect('/')->back()->with('succsess', 'Your request has sended');
     }
 
     /**

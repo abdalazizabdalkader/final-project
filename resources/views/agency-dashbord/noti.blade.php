@@ -30,7 +30,6 @@
               </thead>
               <tbody>
                 @foreach ($notifications as $item )
-                @if ($item->agency_id == 2)
                 <tr>
                     {{-- <th scope="row">{{$i++}}</th>  --}}
                     <td>{{$item->title}}</td>
@@ -61,7 +60,6 @@
 
 
 
-                    @endif
                     @endforeach
                 </tr>
               </tbody>

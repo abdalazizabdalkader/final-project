@@ -19,73 +19,19 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class="">
-                    <td>Regional Director</td>
-                    <td>Edinburgh</td>
-                    <td>515555555555555555555555555</td>
-                    <td>2008/11/13</td>
-                    <td>2008/11/13</td>
-                    <td>
-                        <a class="btn btn-success btn-sm ">show</a>
-                        <a class="btn btn-primary btn-sm ">edite</a>
-                    </td>
-                </tr>
-                <tr class="">
-                    <td>Regional Director</td>
-                    <td>Edinburgh</td>
-                    <td>111</td>
-                    <td>2008/11/13</td>
-                    <td>2008/11/13</td>
-                    <td>
-                        <a class="btn btn-success btn-sm ">show</a>
-                        <a class="btn btn-primary btn-sm ">edite</a>
-                    </td>
-                </tr>
-                <tr class="">
-                    <td>Regional Director</td>
-                    <td>Edinburgh</td>
-                    <td>113</td>
-                    <td>2008/11/13</td>
-                    <td>2008/11/13</td>
-                    <td>
-                        <a class="btn btn-success btn-sm ">show</a>
-                        <a class="btn btn-primary btn-sm ">edite</a>
-                    </td>
-                </tr>
-                <tr class="">
-                    <td>Regional Director</td>
-                    <td>Edinburgh</td>
-                    <td>515555555555555555555555555</td>
-                    <td>2008/11/13</td>
-                    <td>2008/11/13</td>
-                    <td>
-                        <a class="btn btn-success btn-sm ">show</a>
-                        <a class="btn btn-primary btn-sm ">edite</a>
-                    </td>
-                </tr>
-                <tr class="">
-                    <td>Regional Director</td>
-                    <td>Edinburgh</td>
-                    <td>515555555555555555555555555</td>
-                    <td>2008/11/13</td>
-                    <td>2008/11/13</td>
-                    <td>
-                        <a class="btn btn-success btn-sm ">show</a>
-                        <a class="btn btn-primary btn-sm ">edite</a>
-                    </td>
-                </tr>
-              <tr class="">
-                    <td>Regional Director</td>
-                    <td>Edinburgh</td>
-                    <td>515555555555555555555555555</td>
-                    <td>2008/11/13</td>
-                    <td>2008/11/13</td>
-                    <td>
-                        <a class="btn btn-success btn-sm " >show</a>
-                        <a class="btn btn-primary btn-sm ">edite</a>
-                    </td>
-                </tr>
-
+                  @foreach ($cars as $car )
+                      
+                  <tr >
+                      <td>{{$car->name}}</td>
+                      <td>{{$car->id}}</td>
+                      <td>{{$car->agency->name}}</td>
+                      <td>{{$car->careated_at}}</td>
+                      <td>{{$car->updated_at}}</td>
+                      <td>
+                          <a class="btn btn-success btn-sm " href="{{route('details',['id'=>$car->id])}}">show</a>
+                        </td>
+                    </tr>
+                    @endforeach
             </tbody>
             </table>
           </div>

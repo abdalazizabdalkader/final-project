@@ -15,6 +15,8 @@
         }
     );
 
+    
+
     Route::any('logout', [AuthenticatedSessionController::class, 'destroy'])
         ->name('logout');
 

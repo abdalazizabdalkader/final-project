@@ -33,8 +33,7 @@
                             <td>{{ $car->updated_at->diffForHumans() }}</td>
                             <td>likes</td>
                             <td>
-                                <a class="btn btn-success btn-sm ">show</a>
-                                <a class="btn btn-primary btn-sm ">edite</a>
+                                <a class="btn btn-success btn-sm  " href="{{route('details',['id'=>$car->id])}}">show</a>
                                 <form action="{{route('agency.unactive',['id' => $car->id])}}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <button class="btn btn-danger btn-sm " name="unactive" value="{{!($car->avilable)? 1: 0}}">unavailable</button></form>

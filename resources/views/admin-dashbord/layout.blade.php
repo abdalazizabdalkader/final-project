@@ -10,7 +10,7 @@
   <title>Admin Dashboard </title>
   <link href="{{asset('./css/simple-datatables.css')}}" rel="stylesheet" />
   <link href="{{asset('./css/styles.css')}}" rel="stylesheet" />
-  <link href="{{asset('./css/bootstrap-icons.css')}}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
 </head>
 
@@ -73,19 +73,7 @@
                 </div>
                 Logout
               </a>
-              <a class="nav-link"  href="{{route('admin.test')}}">
-                <div class="sb-nav-link-icon">
-                  <i class="bi bi-pencil-square"></i>
-                </div>
-                test
-              </a>
-          </div>
-        </div>
-        <div class="sb-sidenav-footer">
-          <div class="small">Logged in as:</div>
-          {{-- code here --}}
-          Start Bootstrap
-        </div>
+             
       </nav>
     </div>
     <div id="layoutSidenav_content">
@@ -93,13 +81,10 @@
             @yield('content')
         </main>
 
-      <footer class="py-4 bg-dark mt-auto">
-        <div class="container-fluid px-4">
-          <div class="d-flex align-items-center justify-content-between small">
-            <div class="text-muted">Copyright &copy; Your Website 2021</div>
-
+        <footer class="bg-dark text-light py-5">
+          <div class="container px-4 px-lg-5">
+              <div class="small text-center text-light">Created With All Love <i class="bi-heart  text-danger"></i> By Abdulaziz</div>
           </div>
-        </div>
       </footer>
     </div>
   </div>

@@ -14,7 +14,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $orders = Order::all();
+        return view('admin-dashbord.orders')->with('orders', $orders);
     }
 
     /**

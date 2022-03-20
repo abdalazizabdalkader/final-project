@@ -13,10 +13,9 @@
             @csrf
             {{-- guard selectors --}}
             <div>
-                <select name="guard" id="guard">
-                    <option value="admin"></option>
-                    <option value="agency"></option>
-                    <option value="customer"></option>
+                <select name="guard" id="guard" hidden>
+                    
+                    <option value="customer" ></option>
                 </select>
             </div>
             <!-- Name -->

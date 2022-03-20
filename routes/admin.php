@@ -25,7 +25,7 @@ Route::prefix('admin')
         //notification
         Route::get('/notification',[AdminNotifyController::class, 'index']) ->name('notify');
         Route::get('/notification/add',[AdminNotifyController::class, 'create'])->name('notify.add');
-        Route::post('/notification/store',[AdminNotifyController::class, 'store'])->name('notify.store');
+        Route::post('/notification/store',[AdminNotifyController::class, 'store'])->name('notifyStore');
 
         //agencies
         Route::get('/Agencies',[AgencyController::class, 'index']) ->name('agency');
@@ -48,5 +48,7 @@ Route::prefix('admin')
 
         //requests
         Route::get('requests/',[RequestController::class, 'index'])->name('requests');
-        Route::post('requst/send',[RequestController::class, 'store'])->name('send.req');
+
+        //orders 
+        // Route::get('/')
     });

@@ -24,7 +24,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @package App\Models
  */
-class Request extends Model
+class Req extends Model
 {
 	protected $table = 'requests';
 	protected $perPage = 20;

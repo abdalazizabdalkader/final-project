@@ -29,5 +29,13 @@ class DatabaseSeeder extends Seeder
             'end_subscription' => '1-1-2023 00:00:00',
             'subscription_month' => 2
         ]);
+        \App\Models\Cases::create([
+            'id' => 1,
+            'name'=> 'pannding'
+        ]);
+        \App\Models\Cases::create([
+            'id' => 2,
+            'name'=> 'verfying'
+        ]);
     }
 }
