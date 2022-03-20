@@ -20,7 +20,7 @@ class Requests extends Migration
             $table->string('email', 100);
             $table->timestamps();
 
-            $table->foreignId('case_id')->constrained('cases')->nullable();
+            $table->foreignId('case_id')->constrained('cases');
         });
     }
 
