@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Req;
-use Illuminate\Http\Request ;
+use Illuminate\Http\Request;
 
 class RequestController extends Controller
 {
@@ -15,10 +15,10 @@ class RequestController extends Controller
     public function index()
     {
         $requests = REQ::all();
-        return view('admin-dashbord.requests')->with('reqs',$requests);
+        return view('admin-dashbord.requests')->with('reqs', $requests);
     }
 
-   
+
     /**
      * Store a newly created resource in storage.
      *
@@ -28,16 +28,16 @@ class RequestController extends Controller
     public function store(Request $request)
     {
         // dd( $request->name);j
-        $this->validate($request, [
-            'phone' => 'required|regex:/(09)[0-9]{9}/'
-        ]);
+        // $this->validate($request, [
+        //     'phone' => 'required|regex:/(09)[0-9]{9}/'
+        // ]);
         $req = Req::create([
             'agency_name' => $request->name,
             'phone' => $request->phone,
             'email' => $request->email,
-            'case_id ' => 1
+            // 'case_id ' => 1
         ]);
-        return redirect('/')->back()->with('succsess', 'Your request has sended');
+        return redirect()->back()->with('succsess', 'Your request has sended');
     }
 
     /**

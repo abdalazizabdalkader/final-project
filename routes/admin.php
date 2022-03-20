@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
@@ -23,15 +24,15 @@ Route::prefix('admin')
 
         Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
         //notification
-        Route::get('/notification',[AdminNotifyController::class, 'index']) ->name('notify');
-        Route::get('/notification/add',[AdminNotifyController::class, 'create'])->name('notify.add');
-        Route::post('/notification/store',[AdminNotifyController::class, 'store'])->name('notifyStore');
+        Route::get('/notification', [AdminNotifyController::class, 'index'])->name('notify');
+        Route::get('/notification/add', [AdminNotifyController::class, 'create'])->name('notify.add');
+        Route::post('/notification/store', [AdminNotifyController::class, 'store'])->name('notifyStore');
 
         //agencies
-        Route::get('/Agencies',[AgencyController::class, 'index']) ->name('agency');
-        Route::get('/agency/add',[AgencyController::class, 'create'])->name('agency.add');
-        Route::post('/notification/store',[AgencyController::class, 'store'])->name('agency.store');
-        Route::get('/test', [AgencyController::class,'test'])->name('test');
+        Route::get('/Agencies', [AgencyController::class, 'index'])->name('agency');
+        Route::get('/agency/add', [AgencyController::class, 'create'])->name('agency.add');
+        Route::post('/agency/notification/store', [AgencyController::class, 'store'])->name('agency.store');
+        Route::get('/test', [AgencyController::class, 'test'])->name('test');
 
         //Settings
         Route::post('/add.brand', [BrandController::class, 'store'])->name('addBrande');
@@ -41,13 +42,13 @@ Route::prefix('admin')
         //add subscription
         // Route::post('/add.subscription', [SubscriptionController::class, 'store'])->name('addSubscription');
         //cars
-        Route::get('/cars',[CarController::class, 'allCars'])->name('cars');
-        Route::get('/cars/setting',[CarController::class, 'carSetting'])->name('carSetting');
+        Route::get('/cars', [CarController::class, 'allCars'])->name('cars');
+        Route::get('/cars/setting', [CarController::class, 'carSetting'])->name('carSetting');
 
         Route::post('/unactive/{id}', [AgencyController::class, 'unactive'])->name('unactive');
 
         //requests
-        Route::get('requests/',[RequestController::class, 'index'])->name('requests');
+        Route::get('requests/', [RequestController::class, 'index'])->name('requests');
 
         //orders 
         // Route::get('/')

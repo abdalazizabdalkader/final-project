@@ -33,14 +33,15 @@ class Req extends Model
 		'case_id' => 'int'
 	];
 
+	
+	protected $guarded = [];
+
 	// protected $fillable = [
 	// 	'agency_name',
 	// 	'phone',
 	// 	'email',
 	// 	'case_id'
-	// ];
-	
-
+	// 
 	// public function case()
 	// {
 	// 	return $this->belongsTo(Case::class);
