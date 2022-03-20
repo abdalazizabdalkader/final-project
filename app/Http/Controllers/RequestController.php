@@ -37,7 +37,7 @@ class RequestController extends Controller
             'email' => $request->email,
             // 'case_id ' => 1
         ]);
-        return redirect('/')->back()->with('succsess', 'Your request has sended');
+        return redirect()->back()->with('succsess', 'Your request has sended');
     }
 
     /**
