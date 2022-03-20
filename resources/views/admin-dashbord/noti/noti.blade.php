@@ -41,20 +41,20 @@
                   @endif
                    {{-- <td>{{$notify->}}</td> --}}
                     <td>{{$notify->created_at->diffForHumans()}}</td>
-                    <td>
+                    {{-- <td>
                         <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             Show
                           </button>
                         {{-- <a class="btn btn-danger btn-sm ">hide</a> --}}
 
-                    </td>
+                    </td> --}}
                 </tr>
                   @endforeach
                 
               </tbody>
             </table>
-             <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<!-- Modal -->
+  {{-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
@@ -62,41 +62,14 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque reprehenderit harum
-          sunt deserunt debitis
-           cum iusto, dicta nostrum commodi quae quisquam ad magni quo beatae quia magnam ullam
-            sequi rerum.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque reprehenderit harum
-            sunt deserunt debitis
-             cum iusto, dicta nostrum commodi quae quisquam ad magni quo beatae quia magnam ullam
-              sequi rerum.
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque reprehenderit harum
-              sunt deserunt debitis
-               cum iusto, dicta nostrum commodi quae quisquam ad magni quo beatae quia magnam ullam
-                sequi rerum.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque reprehenderit harum
-                sunt deserunt debitis
-                 cum iusto, dicta nostrum commodi quae quisquam ad magni quo beatae quia magnam ullam
-                  sequi rerum.
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque reprehenderit harum
-                  sunt deserunt debitis
-                   cum iusto, dicta nostrum commodi quae quisquam ad magni quo beatae quia magnam ullam
-                    sequi rerum.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque reprehenderit harum
-                    sunt deserunt debitis
-                     cum iusto, dicta nostrum commodi quae quisquam ad magni quo beatae quia magnam ullam
-                      sequi rerum.
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque reprehenderit harum
-                      sunt deserunt debitis
-                       cum iusto, dicta nostrum commodi quae quisquam ad magni quo beatae quia magnam ullam
-                        sequi rerum.
-                                                  </div>
+          
+       </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
 {{-- end modal  --}}
           </div>
     </div>
