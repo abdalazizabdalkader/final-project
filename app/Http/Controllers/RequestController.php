@@ -28,9 +28,9 @@ class RequestController extends Controller
     public function store(Request $request)
     {
         // dd( $request->name);j
-        $this->validate($request, [
-            'phone' => 'required|regex:/(09)[0-9]{9}/'
-        ]);
+        // $this->validate($request, [
+        //     'phone' => 'required|regex:/(09)[0-9]{9}/'
+        // ]);
         $req = Req::create([
             'agency_name' => $request->name,
             'phone' => $request->phone,
